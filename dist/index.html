@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Totally Real Site</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Chela+One&family=Patrick+Hand&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <input type="text" class="cityInput" placeholder=" City..."> <i id="search" style="font-size: 24px;" class="fa fa-search" onclick="handleSearch()"></i>
+    <div class="weathersCities">
+
+    </div>
+    <script id="cities-template" type="text/x-handlebars-template">
+
+        {{#each cities}}
+        <div class="city">
+            <div class="photo">
+                <img src="http://openweathermap.org/img/wn/{{conditionPic}}@2x.png">
+            </div>
+            <div class="information">
+                <span class="cityName">{{name}}</span>
+                <span>°C {{temperature}}</span>
+                <span>{{condition}}</span> {{#if saved}}
+                <i class="fa fa-trash" id="deleteCity"></i> {{else}}
+                <i class="fa fa-save" id="saveCity"></i> {{/if}}
+            </div>
+
+
+        </div>
+
+        {{/each}}
+
+
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js "></script>
+    <script src="./jquery/dist/jquery.js"></script>
+    <script src="model.js"></script>
+    <script src="render.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

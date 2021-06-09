@@ -1,0 +1,39 @@
+body {
+    background-image: url("https://i.pinimg.com/originals/26/be/b0/26beb09153b8df233d82e66bef3edfbb.jpg");
+}
+
+#search {
+    text-shadow: 6px 0px 20px rgba(255, 255, 255, .90);
+}
+
+.city {
+    margin-top: 20px;
+    background-color: #e1b12c;
+    border-radius: 10px;
+    font-size: 20px;
+    display: grid;
+    grid-template-columns: 1fr 9fr;
+    box-shadow: 6px 0px 20px rgba(255, 255, 255, .90);
+}
+
+.information {
+    margin-top: 40px;
+}
+
+span {
+    margin: 30px;
+    text-align: right;
+    font-family: 'Abel', sans-serif;
+    text-shadow: 0px 0px 5px rgba(66, 66, 66, .75);
+}
+
+input {
+    width: 90%;
+    border-radius: 5px;
+    height: 40px;
+    font-size: 20px;
+}
+
+i {
+    color: red;
+}
